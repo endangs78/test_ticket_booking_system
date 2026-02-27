@@ -1,0 +1,878 @@
+{
+  "info": {
+    "_postman_id": "45f3e588-fe6b-42d2-9dbe-5be435997881",
+    "name": "tiket booking system",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "9920119"
+  },
+  "item": [
+    {
+      "name": "http://localhost:8080/api/v1/concerts",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/v1/concerts",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "concerts"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "http://localhost:8080/api/v1/concerts",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/concerts",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "concerts"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 26 Feb 2026 10:15:38 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"artist\": \"Coldplay\",\n        \"basePrice\": 1500000,\n        \"capacity\": 10000,\n        \"concertTime\": \"2026-12-01T12:00:00Z\",\n        \"id\": 2,\n        \"name\": \"Coldplay Live Jakarta\",\n        \"status\": \"UPCOMING\",\n        \"timezone\": \"Asia/Jakarta\",\n        \"venue\": \"Jakarta International Stadium\"\n    },\n    {\n        \"artist\": \"taylor swift\",\n        \"basePrice\": 3000000,\n        \"capacity\": 1000,\n        \"concertTime\": \"2026-02-26T07:39:29.805474Z\",\n        \"id\": 1,\n        \"name\": \"Taylor Swift Eras Tour\",\n        \"status\": \"UPCOMING\",\n        \"timezone\": \"indonesia\",\n        \"venue\": \"Gelora Bung Karno\"\n    }\n]"
+        }
+      ]
+    },
+    {
+      "name": "http://localhost:8080/api/v1/concerts/{id}",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/v1/concerts/2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "concerts",
+            "2"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "http://localhost:8080/api/v1/concerts/{id}",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/concerts/2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "concerts",
+                "2"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 26 Feb 2026 10:17:54 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"artist\": \"Coldplay\",\n    \"basePrice\": 1500000,\n    \"capacity\": 10000,\n    \"concertTime\": \"2026-12-01T12:00:00Z\",\n    \"id\": 2,\n    \"name\": \"Coldplay Live Jakarta\",\n    \"status\": \"UPCOMING\",\n    \"timezone\": \"Asia/Jakarta\",\n    \"venue\": \"Jakarta International Stadium\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "http://localhost:8080/api/v1/concerts",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n        \"artist\": \"J.Tajor\",\n        \"basePrice\": 1500000,\n        \"capacity\": 1000,\n        \"concertTime\": \"2026-09-01T12:00:00Z\",\n        \"name\": \"J.Tajor Live Jakarta\",\n        \"status\": \"UPCOMING\",\n        \"timezone\": \"Asia/Jakarta\",\n        \"venue\": \"Jakarta International Stadium\"\n    }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/v1/concerts",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "concerts"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "http://localhost:8080/api/v1/concerts",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n        \"artist\": \"J.Tajor\",\n        \"basePrice\": 1500000,\n        \"capacity\": 1000,\n        \"concertTime\": \"2026-09-01T12:00:00Z\",\n        \"name\": \"J.Tajor Live Jakarta\",\n        \"status\": \"UPCOMING\",\n        \"timezone\": \"Asia/Jakarta\",\n        \"venue\": \"Jakarta International Stadium\"\n    }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/concerts",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "concerts"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 26 Feb 2026 10:26:27 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"artist\": \"J.Tajor\",\n    \"basePrice\": 1500000,\n    \"capacity\": 1000,\n    \"concertTime\": \"2026-09-01T12:00:00Z\",\n    \"id\": 3,\n    \"name\": \"J.Tajor Live Jakarta\",\n    \"status\": \"UPCOMING\",\n    \"timezone\": \"Asia/Jakarta\",\n    \"venue\": \"Jakarta International Stadium\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "http://localhost:8080/api/v1/concerts/{id}",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"id\":3,\n        \"artist\": \"J.Tajor\",\n        \"basePrice\": 1500000,\n        \"capacity\": 1000,\n        \"concertTime\": \"2026-11-01T12:00:00Z\",\n        \"name\": \"J.Tajor Live Jakarta\",\n        \"status\": \"UPCOMING\",\n        \"timezone\": \"Asia/Jakarta\",\n        \"venue\": \"Jakarta International Stadium\"\n    }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/v1/concerts/3",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "concerts",
+            "3"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "http://localhost:8080/api/v1/concerts/{id}",
+          "originalRequest": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"id\":3,\n        \"artist\": \"J.Tajor\",\n        \"basePrice\": 1500000,\n        \"capacity\": 1000,\n        \"concertTime\": \"2026-11-01T12:00:00Z\",\n        \"name\": \"J.Tajor Live Jakarta\",\n        \"status\": \"UPCOMING\",\n        \"timezone\": \"Asia/Jakarta\",\n        \"venue\": \"Jakarta International Stadium\"\n    }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/concerts/3",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "concerts",
+                "3"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 26 Feb 2026 10:37:59 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"artist\": \"J.Tajor\",\n    \"basePrice\": 1500000,\n    \"capacity\": 1000,\n    \"concertTime\": \"2026-09-01T12:00:00Z\",\n    \"id\": 3,\n    \"name\": \"J.Tajor Live Jakarta\",\n    \"status\": \"UPCOMING\",\n    \"timezone\": \"Asia/Jakarta\",\n    \"venue\": \"Jakarta International Stadium\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "http://localhost:8080/api/v1/concerts/{id}/pricing",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/v1/concerts/1/pricing",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "concerts",
+            "1",
+            "pricing"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "http://localhost:8080/api/v1/concerts/{id}/pricing",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/concerts/1/pricing",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "concerts",
+                "1",
+                "pricing"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 26 Feb 2026 22:26:04 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"GENERAL\": 3000000,\n    \"VIP\": 6120000.000000000108,\n    \"STANDARD\": 3614400.00000000001296\n}"
+        }
+      ]
+    },
+    {
+      "name": "http://localhost:8080/api/v1/concerts/{id}/settlement",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/v1/concerts/3/settlement",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "concerts",
+            "3",
+            "settlement"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "http://localhost:8080/api/v1/concerts/{id}/settlement",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/concerts/3/settlement",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "concerts",
+                "3",
+                "settlement"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 26 Feb 2026 11:51:16 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"revenue\": 0,\n    \"totalBookings\": 0\n}"
+        },
+        {
+          "name": "http://localhost:8080/api/v1/concerts/{id}/settlement",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/concerts/3/settlement",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "concerts",
+                "3",
+                "settlement"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 26 Feb 2026 23:19:00 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"revenue\": 1500000,\n    \"totalBookings\": 1\n}"
+        }
+      ]
+    },
+    {
+      "name": "http://localhost:8080/api/v1/concerts/{id}/availability",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/v1/concerts/1/availability",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "concerts",
+            "1",
+            "availability"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "http://localhost:8080/api/v1/concerts/{id}/availability",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/concerts/1/availability",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "concerts",
+                "1",
+                "availability"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 26 Feb 2026 22:26:36 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"availableStock\": 2000,\n        \"categoryName\": \"GENERAL\",\n        \"concert\": {\n            \"artist\": \"taylor swift\",\n            \"basePrice\": 3000000,\n            \"capacity\": 1000,\n            \"concertTime\": \"2026-02-26T07:39:29.805474Z\",\n            \"id\": 1,\n            \"name\": \"Taylor Swift Eras Tour\",\n            \"status\": \"UPCOMING\",\n            \"timezone\": \"indonesia\",\n            \"venue\": \"Gelora Bung Karno\"\n        },\n        \"id\": 3,\n        \"priceMultiplier\": 1,\n        \"totalStock\": 2000,\n        \"version\": 0\n    },\n    {\n        \"availableStock\": 98,\n        \"categoryName\": \"VIP\",\n        \"concert\": {\n            \"artist\": \"taylor swift\",\n            \"basePrice\": 3000000,\n            \"capacity\": 1000,\n            \"concertTime\": \"2026-02-26T07:39:29.805474Z\",\n            \"id\": 1,\n            \"name\": \"Taylor Swift Eras Tour\",\n            \"status\": \"UPCOMING\",\n            \"timezone\": \"indonesia\",\n            \"venue\": \"Gelora Bung Karno\"\n        },\n        \"id\": 1,\n        \"priceMultiplier\": 2,\n        \"totalStock\": 100,\n        \"version\": 1\n    },\n    {\n        \"availableStock\": 498,\n        \"categoryName\": \"STANDARD\",\n        \"concert\": {\n            \"artist\": \"taylor swift\",\n            \"basePrice\": 3000000,\n            \"capacity\": 1000,\n            \"concertTime\": \"2026-02-26T07:39:29.805474Z\",\n            \"id\": 1,\n            \"name\": \"Taylor Swift Eras Tour\",\n            \"status\": \"UPCOMING\",\n            \"timezone\": \"indonesia\",\n            \"venue\": \"Gelora Bung Karno\"\n        },\n        \"id\": 2,\n        \"priceMultiplier\": 1.2,\n        \"totalStock\": 500,\n        \"version\": 1\n    }\n]"
+        }
+      ]
+    },
+    {
+      "name": "http://localhost:8080/api/v1/bookings",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"userId\":1,\n    \"ticketId\": 3,\n    \"categoryName\":\"GENERAL\",\n    \"qty\":1,\n    \"idempotencyKey\":\"ac123\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/v1/bookings",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "bookings"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "http://localhost:8080/api/v1/bookings",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"userId\":1,\n    \"ticketId\": 3,\n    \"categoryName\":\"GENERAL\",\n    \"qty\":1,\n    \"idempotencyKey\":\"ac123\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/bookings",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "bookings"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 26 Feb 2026 23:17:48 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"concert\": {\n        \"artist\": \"J.Tajor\",\n        \"basePrice\": 1500000,\n        \"capacity\": 1000,\n        \"concertTime\": \"2026-09-01T12:00:00Z\",\n        \"id\": 3,\n        \"name\": \"J.Tajor Live Jakarta\",\n        \"status\": \"UPCOMING\",\n        \"timezone\": \"Asia/Jakarta\",\n        \"venue\": \"Jakarta International Stadium\"\n    },\n    \"expiresAt\": \"2026-02-27T06:22:48.377336+07:00\",\n    \"id\": 3,\n    \"idempotencyKey\": \"ac123\",\n    \"status\": \"CONFIRMED\",\n    \"totalAmount\": 1500000,\n    \"userId\": 1\n}"
+        }
+      ]
+    },
+    {
+      "name": "http://localhost:8080/api/v1/bookings/{id}",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/v1/bookings/3",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "bookings",
+            "3"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "http://localhost:8080/api/v1/bookings/{id}",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/bookings/3",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "bookings",
+                "3"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 26 Feb 2026 23:18:12 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"concert\": {\n        \"artist\": \"J.Tajor\",\n        \"basePrice\": 1500000,\n        \"capacity\": 1000,\n        \"concertTime\": \"2026-09-01T12:00:00Z\",\n        \"id\": 3,\n        \"name\": \"J.Tajor Live Jakarta\",\n        \"status\": \"UPCOMING\",\n        \"timezone\": \"Asia/Jakarta\",\n        \"venue\": \"Jakarta International Stadium\"\n    },\n    \"expiresAt\": \"2026-02-26T23:22:48.377336Z\",\n    \"id\": 3,\n    \"idempotencyKey\": \"ac123\",\n    \"status\": \"CONFIRMED\",\n    \"totalAmount\": 1500000,\n    \"userId\": 1\n}"
+        }
+      ]
+    },
+    {
+      "name": "http://localhost:8080/api/v1/bookings",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/v1/bookings?userId=1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "bookings"
+          ],
+          "query": [
+            {
+              "key": "userId",
+              "value": "1",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "http://localhost:8080/api/v1/bookings",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/bookings?userId=1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "bookings"
+              ],
+              "query": [
+                {
+                  "key": "userId",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 26 Feb 2026 23:18:19 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"concert\": {\n            \"artist\": \"taylor swift\",\n            \"basePrice\": 3000000,\n            \"capacity\": 1000,\n            \"concertTime\": \"2026-02-26T07:39:29.805474Z\",\n            \"id\": 1,\n            \"name\": \"Taylor Swift Eras Tour\",\n            \"status\": \"UPCOMING\",\n            \"timezone\": \"indonesia\",\n            \"venue\": \"Gelora Bung Karno\"\n        },\n        \"expiresAt\": \"2026-02-26T12:16:38.681475Z\",\n        \"id\": 1,\n        \"idempotencyKey\": \"abc123\",\n        \"status\": \"CANCELLED\",\n        \"totalAmount\": 12000000,\n        \"userId\": 1\n    },\n    {\n        \"concert\": {\n            \"artist\": \"taylor swift\",\n            \"basePrice\": 3000000,\n            \"capacity\": 1000,\n            \"concertTime\": \"2026-02-26T07:39:29.805474Z\",\n            \"id\": 1,\n            \"name\": \"Taylor Swift Eras Tour\",\n            \"status\": \"UPCOMING\",\n            \"timezone\": \"indonesia\",\n            \"venue\": \"Gelora Bung Karno\"\n        },\n        \"expiresAt\": \"2026-02-26T22:29:33.982335Z\",\n        \"id\": 2,\n        \"idempotencyKey\": \"abc12\",\n        \"status\": \"CANCELLED\",\n        \"totalAmount\": 7200000,\n        \"userId\": 1\n    },\n    {\n        \"concert\": {\n            \"artist\": \"J.Tajor\",\n            \"basePrice\": 1500000,\n            \"capacity\": 1000,\n            \"concertTime\": \"2026-09-01T12:00:00Z\",\n            \"id\": 3,\n            \"name\": \"J.Tajor Live Jakarta\",\n            \"status\": \"UPCOMING\",\n            \"timezone\": \"Asia/Jakarta\",\n            \"venue\": \"Jakarta International Stadium\"\n        },\n        \"expiresAt\": \"2026-02-26T23:22:48.377336Z\",\n        \"id\": 3,\n        \"idempotencyKey\": \"ac123\",\n        \"status\": \"CONFIRMED\",\n        \"totalAmount\": 1500000,\n        \"userId\": 1\n    }\n]"
+        }
+      ]
+    },
+    {
+      "name": "http://localhost:8080/api/v1/bookings/1/cancel",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/v1/bookings/2/cancel",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "bookings",
+            "2",
+            "cancel"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
